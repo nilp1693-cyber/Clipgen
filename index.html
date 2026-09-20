@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClipGen AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="hero">
+
+            <div class="logo">
+                Clip<span>Gen</span>
+            </div>
+
+            <h1>
+                Turn Long Videos Into
+                <span class="gradient">Cinematic Clips</span>
+            </h1>
+
+            <p>
+                AI-powered highlight detection,
+                smart reframing and automatic
+                vertical clips.
+            </p>
+
+        </header>
+
+
+        <section class="generator-card">
+
+            <label for="videoUrl">
+                Video URL
+            </label>
+
+            <div class="input-row">
+
+                <input
+                    id="videoUrl"
+                    type="url"
+                    placeholder="Paste your video URL..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="generateButton"
+                    onclick="generateClips()"
+                >
+                    Generate Clips
+                </button>
+
+            </div>
+
+
+            <div class="options">
+
+                <button
+                    class="option active"
+                    data-duration="15"
+                    onclick="selectDuration(this)"
+                >
+                    15 sec
+                </button>
+
+                <button
+                    class="option"
+                    data-duration="30"
+                    onclick="selectDuration(this)"
+                >
+                    30 sec
+                </button>
+
+                <button
+                    class="option"
+                    data-duration="60"
+                    onclick="selectDuration(this)"
+                >
+                    60 sec
+                </button>
+
+                <button
+                    class="option active"
+                    id="verticalOption"
+                    onclick="toggleVertical(this)"
+                >
+                    9:16
+                </button>
+
+                <button
+                    class="option active"
+                    id="captionOption"
+                    onclick="toggleCaptions(this)"
+                >
+                    Auto Captions
+                </button>
+
+            </div>
+
+
+            <div
+                id="status"
+                class="status hidden"
+            ></div>
+
+
+            <div
+                id="clips"
+                class="clips"
+            ></div>
+
+        </section>
+
+
+        <section class="features">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    AI Highlights
+                </h3>
+
+                <p>
+                    Automatically find interesting
+                    moments in your video.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Smart Reframing
+                </h3>
+
+                <p>
+                    Keep the main subject inside
+                    the vertical frame.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🎬
+                </div>
+
+                <h3>
+                    Cinematic Clips
+                </h3>
+
+                <p>
+                    Create ready-to-share
+                    vertical MP4 clips.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    💬
+                </div>
+
+                <h3>
+                    Auto Captions
+                </h3>
+
+                <p>
+                    Generate captions from
+                    the video's speech.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            ClipGen AI • Open-source prototype
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
